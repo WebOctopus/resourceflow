@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background-color: #ffffff;
+  color: #000000;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+:root.dark {
+  color-scheme: dark;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Dark mode styles */
+.dark body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark .bg-white {
+  background-color: #2d2d2d;
+}
+
+.dark .text-gray-900 {
+  color: #ffffff;
+}
+
+.dark .text-gray-700 {
+  color: #e2e8f0;
+}
+
+.dark .text-gray-600 {
+  color: #cbd5e0;
+}
+
+.dark .text-gray-500 {
+  color: #a0aec0;
+}
+
+.dark .border-gray-200 {
+  border-color: #333333;
+}
+
+.dark .border-gray-300 {
+  border-color: #404040;
+}
+
+.dark .shadow {
+  --tw-shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #333333;
+  border-color: #404040;
+  color: #ffffff;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #718096;
+}
+
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus {
+  border-color: #4f46e5;
+  --tw-ring-color: rgba(79, 70, 229, 0.2);
+}
+
+/* Mobile viewport height fix */
+@supports (-webkit-touch-callout: none) {
+  .min-h-screen {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Improved touch targets for mobile */
+@media (max-width: 640px) {
+  button, 
+  [role="button"],
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Prevent pull-to-refresh on iOS */
+html, body {
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Improved mobile form styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+textarea,
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0.375rem;
+  width: 100%;
+}
+
+/* Fix for mobile Safari's 100vh issue */
+.h-screen {
+  height: 100vh;
+  height: -webkit-fill-available;
+}
+
+/* Improved mobile modal handling */
+.fixed.inset-0 {
+  position: fixed;
+  top: env(safe-area-inset-top);
+  right: env(safe-area-inset-right);
+  bottom: env(safe-area-inset-bottom);
+  left: env(safe-area-inset-left);
+}
